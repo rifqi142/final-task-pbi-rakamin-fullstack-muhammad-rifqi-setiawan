@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "652786bf-ca18-4cf7-bb3a-8ad484434f6f",
+		"name": "PBL_Rakamin_Fullstack",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "17647214"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"antoni\",\r\n    \"email\": \"antoni@gmail.com\",\r\n    \"password\": \"123456\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8082/users/register"
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"antoni@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8082/users/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpZnFpczIyMUBnbWFpbC5jb20iLCJleHAiOjE3MTExMzAxNTgsImlkIjo1fQ.4sL1uffDmWBrdcFMlXne0pdJrXGeF6NsiA7naDFdhps"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"antonigokil@gmail.com\",\r\n    \"username\": \"antonigokiiels\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8082/users/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFudG9uaUBnbWFpbC5jb20iLCJleHAiOjE3MTEzNzYyNjksImlkIjozfQ.hskrchg6vJkX3L3qE2e1D-vu8qdWD2pSV5quMcuwYw4"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8082/users"
+					},
+					"response": []
+				},
+				{
+					"name": "Login Acc-2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"fadlan@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8082/users/login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Photos",
+			"item": [
+				{
+					"name": "Create Photo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFudG9uaUBnbWFpbC5jb20iLCJleHAiOjE3MTEzNzU3MDQsImlkIjozfQ.eCrz0A4lNX3xMVSH8QG57YR3ZaDFd7tRyyZEREh6t84"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Food \",\r\n    \"caption\": \"Makanan enak daerah tgr\",\r\n    \"photo_url\": \"https://www.google.com/\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8082/photos/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Photo By id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFudG9uaUBnbWFpbC5jb20iLCJleHAiOjE3MTEzNzU3MDQsImlkIjozfQ.eCrz0A4lNX3xMVSH8QG57YR3ZaDFd7tRyyZEREh6t84"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8082/photos/99"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Photo By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFudG9uaUBnbWFpbC5jb20iLCJleHAiOjE3MTEzNzU3MDQsImlkIjozfQ.eCrz0A4lNX3xMVSH8QG57YR3ZaDFd7tRyyZEREh6t84"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Top 10 food\",\r\n    \"caption\": \"makanan\",\r\n    \"photo_url\": \"https://www.google.com/meats\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8082/photos/4"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Photo By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFudG9uaUBnbWFpbC5jb20iLCJleHAiOjE3MTEzNzYwMjIsImlkIjozfQ.v9ofGCRzbmKauJHmmhE8Zk-fLQ3gg3UfcBPM61G7N-s"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8082/photos/5"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
